@@ -1,29 +1,16 @@
-class Solution {
-public:
-    void rotate(vector<vector<int>>& matrix) {
-        int N = matrix.size();
-
-        // find transpose
-        for (int i = 0; i < N; i++) {
-            for (int j = i; j < N; j++) {
-                swap(matrix[i][j], matrix[j][i]);
-            }
-        }
-
-        // flip horizontally - For clock wise rotation
-        for (int i = 0; i < N; i++) {
-            reverse(matrix[i].begin(), matrix[i].end());
-        }
-
-        /*
-            //flip vertically - For anticlock wise rotation
-                for(int col = 0; col<N; col++) {
-                    int row = 0;
-                        int mid = n/2;
-                            while(row < mid) {
-                                swap(matrix[row][col],
-           matrix[n-row-1][col]); row++;
-                                                                                             }
-                                                                                              }                                                                                        */
-    }
-};
+1class Solution {
+2public:
+3    void rotate(vector<vector<int>>& matrix) {
+4        int n = matrix.size();
+5
+6        for(int i = 0; i < n; i++) {
+7            for(int j = i; j < n; j++) {
+8              swap(matrix[i][j], matrix[j][i]);  
+9            } 
+10        }
+11
+12        for(int i = 0; i < n; i++) {
+13            reverse(matrix[i].begin(), matrix[i].end());
+14        }
+15    }
+16};
