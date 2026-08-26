@@ -18,3 +18,18 @@
 18        return dp[n - 1];
 19    }
 20};
+21
+22
+23// class Solution {
+24// public:
+25//     int climbStairs(int n) {
+26        
+27//     if(n == 1) {
+28//         return 1;
+29//     }
+30//     if(n == 2) {
+31//         return 2;
+32//     }
+33//     return (n - 1) + (n - 2);
+34//     }
+35// };
